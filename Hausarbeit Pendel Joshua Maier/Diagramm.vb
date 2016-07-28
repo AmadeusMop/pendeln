@@ -1,13 +1,12 @@
 ﻿Public Class frmDiagramm
 
-    Private Sub Diagramm_Load(sender As Object, e As EventArgs) Handles Me.Load     'Bestimmung der Position und Größe des Fensters beim Anklicken von "Diagramm" in der Start Form
-        DoubleBuffered = True
-        Me.Left = 10
-        Me.Top = 10
-        Me.Width = 650
-        Me.Height = 600
-
-        Me.zoom = 1.0
+    Private Sub Diagramm_Load(sender As Object, e As EventArgs) Handles Me.Load     'Bestimmung von Standard-Werten beim Laden des Fensters
+        DoubleBuffered = True                                                       'Zur Vermeidung des Flackerns
+        Me.Left = 10                                                                '10 Einheiten vom linken Bildschirmrand entfernt
+        Me.Top = 10                                                                 '10 Einheiten vom oberen Bildschirmrand entfernt
+        Me.Width = 650                                                              'Breite = 650 Einheiten
+        Me.Height = 600                                                             'Hoehe = 600 Einheiten
+        Me.zoom = 1.0                                                               'Zoom = 100%
     End Sub
 
 
@@ -21,7 +20,7 @@
 
     Dim x0 As Decimal
     Dim x1 As Decimal
-    Dim dx As Decimal
+    Dim dx As Decimal                               'What's dx?
     Dim yAuslenkung0 As Decimal
     Dim yAuslenkung1 As Decimal
     Dim ySpeed0 As Decimal
@@ -66,36 +65,36 @@
 
 
 
-            If optlinie.Checked Then
+            If optlinie.Checked = True Then
 
-                If chkAccel.Checked Then
+                If chkAccel.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinAccel, x0, yAccel0, x1, yAccel1)
                 End If
 
-                If chkSpeed.Checked Then
+                If chkSpeed.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinSpeed, x0, ySpeed0, x1, ySpeed1)
                 End If
 
-                If chkAuslenkung.Checked Then
+                If chkAuslenkung.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinAuslenkung, x0, yAuslenkung0, x1, yAuslenkung1)
                 End If
 
             Else
 
-                If chkAccel.Checked Then
+                If chkAccel.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Green, x0 - 2, yAccel0 - 2, 4, 4)
                 End If
 
-                If chkSpeed.Checked Then
+                If chkSpeed.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Blue, x0 - 2, ySpeed0 - 2, 4, 4)
                 End If
 
-                If chkAuslenkung.Checked Then
+                If chkAuslenkung.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Red, x0 - 2, yAuslenkung0 - 2, 4, 4)
                 End If

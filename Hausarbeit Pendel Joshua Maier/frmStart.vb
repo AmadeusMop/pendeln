@@ -13,11 +13,11 @@
         Me.Top = 10
         Me.Width = 400
         Me.Height = 345
-        Me.gfxTimer.Start()
+        Me.gfxTimer.Start()                                                                     'Explanation to gfxTimer
     End Sub
 
     Private Sub cmdPendel2D_Click(sender As Object, e As EventArgs) Handles cmdPendel2D.Click
-        If frmPendel.Visible Then        'Wenn frmPendel (2D) angezeigt, dann "versteckt" der Klick das Fenster wieder
+        If frmPendel.Visible = True Then        'Wenn frmPendel (2D) angezeigt, dann "versteckt" der Klick das Fenster wieder
             frmPendel.Hide()
         Else
             frmPendel.Show()                    'Wenn frmPendel (2D) nicht angezeigt, öffnet der Klick das Fenster
@@ -25,7 +25,7 @@
     End Sub
 
     Private Sub cmdPendel3D_Click(sender As Object, e As EventArgs) Handles cmdPendel3D.Click
-        If frmPendel3D.Visible Then      'Dasselbe wie oben, nur für das 3D Pendel
+        If frmPendel3D.Visible = True Then      'Dasselbe wie oben, nur für das 3D Pendel
             frmPendel3D.Hide()
         Else
             frmPendel3D.Show()

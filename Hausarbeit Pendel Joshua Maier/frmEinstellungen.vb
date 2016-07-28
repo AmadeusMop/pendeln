@@ -1,36 +1,36 @@
 ﻿Public Class frmEinstellungen
 
-    Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load
-        cmbStandort.SelectedIndex = 2
-        DoubleBuffered = True
-        Me.Left = 10
-        Me.Top = 10
-        Me.Width = 450
-        Me.Height = 600
+    Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load         'Bestimmung von Standard-Werten beim Laden des Fensters
+        cmbStandort.SelectedIndex = 0                                                           'Standard-Wert für den Standort ist der Wert aus der Combo Box mit dem Index 2 (gezählt wird 0, 1, 2, ...), die Erde.
+        DoubleBuffered = True                                                                   'Zur Vermeidung des Flackerns
+        Me.Left = 10                                                                            '10 Einheiten vom linken Bildschirmrand entfernt
+        Me.Top = 10                                                                             '10 Einheiten vom oberen Bildschirmrand entfernt
+        Me.Width = 450                                                                          'Breite = 450 Einheiten
+        Me.Height = 600                                                                         'Hoehe = 600 Einheiten
     End Sub
 
     Private Sub cmdEinstellspeich_Click(sender As Object, e As EventArgs) Handles cmdEinstellspeich.Click
 
         Dim a As Boolean = True                                         'Boolsche Var. zur Prüfung der Gültigkeit von Eingaben
-        txtWinkelMax.BackColor = Color.White                            'Hintergrundfarbe txtbox bei korrekter Eingabe und Start wieder auf weiß
+        txtWinkelMax.BackColor = Color.White                            'Hintergrundfarbe txtbox bei korrekter Eingabe und Start auf weiß
 
-        Try                                                             'Überprüfung Gültigkeit der Eingabe für Winkel Auslenkung
+        Try                                                             'Überprüfung der Gültigkeit der Eingabe für Winkel Auslenkung
             frmStart.WinkelAuslenk = txtWinkelMax.Text                      'Prüfung der Variablen-Definition
         Catch ex As Exception                                               'nicht gültig
             a = False                                                       'dann Boolsche Variable auf FALSE
-            txtWinkelMax.BackColor = Color.Red                                  'und Hintergrundfarbe auf rot
+            txtWinkelMax.BackColor = Color.Red                              'und Hintergrundfarbe auf rot
         End Try
 
         Try
             frmStart.l = txtl.Text                                      'Überprüfung Gültigkeit der Eingabe der Fadenlänge
-        Catch ex As Exception
+        Catch ex As Exception                                           'Rest, siehe oben
             a = False
             txtl.BackColor = Color.Red
         End Try
 
         Try
             frmStart.r = txtr.Text                                      'Überprüfung Gültigkeit der Eingabe für den Kugelradius
-        Catch ex As Exception
+        Catch ex As Exception                                           'Rest,siehe oben
             a = False
             txtr.BackColor = Color.Red
 
@@ -65,8 +65,8 @@
         frmPendel3D.Tiefe = cmbTiefe.Text
 
 
-        If a Then                                                            ' ? Alles ok ?
-            frmStart.WinkelAuslenk = frmStart.WinkelAuslenk * Math.PI / 180                 'ja, dann ° --> Bogenmaß und Wert
+        If a = True Then                                                            'Wenn alle Werte eingegeben und möglich sind
+            frmStart.WinkelAuslenk = frmStart.WinkelAuslenk * Math.PI / 180         'dann Umrechnung von ° in Bogenmaß und Ausgabe des Wertes
             Me.Hide()
             For Each ctl In frmStart.Controls
                 If TypeOf ctl Is Button Then
@@ -74,7 +74,7 @@
                 End If
             Next
             frmStart.n = 0
-        Else : MessageBox.Show("Ungültige Eingabe-! Verwenden Sie nur Zahlen!")         'nein, dann Fehlermeldung
+        Else : MessageBox.Show("Ungültige Eingabe-! Verwenden Sie nur Zahlen!")         'Else: andernfalls, bezogen auf "If a = True". Wenn Else, dann Fehlermeldung wie angezeigt.
         End If
 
 
@@ -82,7 +82,7 @@
 
 
 
-
+  
 
 
 End Class

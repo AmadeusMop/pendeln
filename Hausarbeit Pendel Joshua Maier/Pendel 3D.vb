@@ -85,7 +85,7 @@
 
 
         'Drehen(y)/Kippen(x)/Pendeln(z) durch Multiplikation JEDES Eckpunktes im 3D Raum mit der Rotationsmatrix für x, y, z
-        'Matrizenmultiplikation/Vektor*Matrix: Zeile mal Spalte.
+        'Matrizenmultiplikation bzw. Vektor*Matrix: Zeile mal Spalte.
         'Arrays für Quadereckpunkte (Eckpunkte aufgespalten in x,y,z) werden für Multiplikation verwendet.Z.B.:  (x y z) * (1  0   0
         '                                                                                                        0 sin -cos 
         '                                                                                                        0 cos  sin)
@@ -124,7 +124,7 @@
 
 
         For i = 0 To 7
-            xzeichnen(i) = xAufhaengung3D + xDrehz(i)           'zeichnen=paint
+            xzeichnen(i) = xAufhaengung3D + xDrehz(i)
             yzeichnen(i) = yAufhaengung3D + yDrehz(i)
         Next
 
@@ -154,7 +154,7 @@
 
 
 
-        If chkKoordinatensystem.Checked Then                                                             'Wenn Checkbox "Koordinatensystem anzeigen" angeklickt ist, wird Folgendes berechnet:
+        If chkKoordinatensystem.Checked = True Then                                                             'Wenn Checkbox "Koordinatensystem anzeigen" angeklickt ist, wird Folgendes berechnet:
             xNull(8) = yNull(8) = 0                                                                             'Der Urpsrung
             xNull(9) = 50                                                                                       'Endpunkt der x-Achse
             yNull(9) = 0                                                                                        'Ist bei der Koordinaten xNull(9) = 50 und yNull(9) = 0
