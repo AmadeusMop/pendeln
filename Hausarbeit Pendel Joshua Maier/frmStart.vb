@@ -40,16 +40,22 @@
         End If
     End Sub
 
-    Private Sub cmddiagramm_Click(sender As Object, e As EventArgs) Handles cmddiagramm.Click
+    Private Sub cmddiagramm_Click(sender As Object, e As EventArgs) Handles cmdDiagramm.Click
         If frmDiagramm.Visible = False Then
             frmDiagramm.Show()
         Else
             frmDiagramm.Hide()
 
         End If
+    End Sub
 
+    Private Sub cmdMesswerte_Click(sender As Object, e As EventArgs) Handles cmdMesswerte.Click
+        If Messwerte.Visible = False Then
+            Messwerte.Show()
+        Else
+            Messwerte.Hide()
 
-
+        End If
     End Sub
 
     Private Sub cmdEinstellungen_Click(sender As Object, e As EventArgs) Handles cmdEinstellungen.Click
@@ -119,7 +125,7 @@
         frmDiagramm.Refresh()
         frmPendel.Refresh()
         frmPendel3D.Refresh()
-
+        Messwerte.Refresh()
 
 
     End Sub

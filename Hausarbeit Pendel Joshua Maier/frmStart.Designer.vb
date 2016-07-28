@@ -30,23 +30,24 @@ Partial Class frmStart
         Me.cmdEinstellungen = New System.Windows.Forms.Button()
         Me.cmdPendel2D = New System.Windows.Forms.Button()
         Me.cmdPendel3D = New System.Windows.Forms.Button()
-        Me.cmddiagramm = New System.Windows.Forms.Button()
+        Me.cmdDiagramm = New System.Windows.Forms.Button()
+        Me.cmdMesswerte = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'physTimer
         '
-        Me.physTimer.Interval = 100 '10 Hz
         '
         'gfxTimer
         '
-        Me.gfxTimer.Interval = 20 '50 FPS
+        Me.gfxTimer.Interval = 20
         '
         'cmdStartStop
         '
         Me.cmdStartStop.Enabled = False
-        Me.cmdStartStop.Location = New System.Drawing.Point(137, 243)
+        Me.cmdStartStop.Location = New System.Drawing.Point(206, 370)
+        Me.cmdStartStop.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdStartStop.Name = "cmdStartStop"
-        Me.cmdStartStop.Size = New System.Drawing.Size(75, 23)
+        Me.cmdStartStop.Size = New System.Drawing.Size(112, 35)
         Me.cmdStartStop.TabIndex = 1
         Me.cmdStartStop.Text = "Start / Stop"
         Me.cmdStartStop.UseVisualStyleBackColor = True
@@ -55,17 +56,19 @@ Partial Class frmStart
         '
         Me.lblStartÜberschrift.AutoSize = True
         Me.lblStartÜberschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStartÜberschrift.Location = New System.Drawing.Point(74, 31)
+        Me.lblStartÜberschrift.Location = New System.Drawing.Point(111, 48)
+        Me.lblStartÜberschrift.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStartÜberschrift.Name = "lblStartÜberschrift"
-        Me.lblStartÜberschrift.Size = New System.Drawing.Size(205, 20)
+        Me.lblStartÜberschrift.Size = New System.Drawing.Size(299, 29)
         Me.lblStartÜberschrift.TabIndex = 2
         Me.lblStartÜberschrift.Text = "VB Pendel Joshua Maier"
         '
         'cmdEinstellungen
         '
-        Me.cmdEinstellungen.Location = New System.Drawing.Point(30, 133)
+        Me.cmdEinstellungen.Location = New System.Drawing.Point(144, 119)
+        Me.cmdEinstellungen.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdEinstellungen.Name = "cmdEinstellungen"
-        Me.cmdEinstellungen.Size = New System.Drawing.Size(154, 23)
+        Me.cmdEinstellungen.Size = New System.Drawing.Size(231, 35)
         Me.cmdEinstellungen.TabIndex = 3
         Me.cmdEinstellungen.Text = "Einstellungen / Vorgaben"
         Me.cmdEinstellungen.UseVisualStyleBackColor = True
@@ -73,9 +76,10 @@ Partial Class frmStart
         'cmdPendel2D
         '
         Me.cmdPendel2D.Enabled = False
-        Me.cmdPendel2D.Location = New System.Drawing.Point(30, 196)
+        Me.cmdPendel2D.Location = New System.Drawing.Point(116, 234)
+        Me.cmdPendel2D.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdPendel2D.Name = "cmdPendel2D"
-        Me.cmdPendel2D.Size = New System.Drawing.Size(75, 23)
+        Me.cmdPendel2D.Size = New System.Drawing.Size(112, 35)
         Me.cmdPendel2D.TabIndex = 4
         Me.cmdPendel2D.Text = "Pendel 2D"
         Me.cmdPendel2D.UseVisualStyleBackColor = True
@@ -83,33 +87,47 @@ Partial Class frmStart
         'cmdPendel3D
         '
         Me.cmdPendel3D.Enabled = False
-        Me.cmdPendel3D.Location = New System.Drawing.Point(233, 196)
+        Me.cmdPendel3D.Location = New System.Drawing.Point(298, 234)
+        Me.cmdPendel3D.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdPendel3D.Name = "cmdPendel3D"
-        Me.cmdPendel3D.Size = New System.Drawing.Size(75, 23)
+        Me.cmdPendel3D.Size = New System.Drawing.Size(112, 35)
         Me.cmdPendel3D.TabIndex = 5
         Me.cmdPendel3D.Text = "Pendel 3D"
         Me.cmdPendel3D.UseVisualStyleBackColor = True
         '
-        'cmddiagramm
+        'cmdDiagramm
         '
-        Me.cmddiagramm.Location = New System.Drawing.Point(233, 133)
-        Me.cmddiagramm.Name = "cmddiagramm"
-        Me.cmddiagramm.Size = New System.Drawing.Size(75, 23)
-        Me.cmddiagramm.TabIndex = 6
-        Me.cmddiagramm.Text = "Diagramm"
-        Me.cmddiagramm.UseVisualStyleBackColor = True
+        Me.cmdDiagramm.Location = New System.Drawing.Point(206, 279)
+        Me.cmdDiagramm.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdDiagramm.Name = "cmdDiagramm"
+        Me.cmdDiagramm.Size = New System.Drawing.Size(112, 35)
+        Me.cmdDiagramm.TabIndex = 6
+        Me.cmdDiagramm.Text = "Diagramm"
+        Me.cmdDiagramm.UseVisualStyleBackColor = True
+        '
+        'cmdMesswerte
+        '
+        Me.cmdMesswerte.Location = New System.Drawing.Point(206, 164)
+        Me.cmdMesswerte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdMesswerte.Name = "cmdMesswerte"
+        Me.cmdMesswerte.Size = New System.Drawing.Size(112, 35)
+        Me.cmdMesswerte.TabIndex = 7
+        Me.cmdMesswerte.Text = "Messwerte"
+        Me.cmdMesswerte.UseVisualStyleBackColor = True
         '
         'frmStart
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(344, 297)
-        Me.Controls.Add(Me.cmddiagramm)
+        Me.ClientSize = New System.Drawing.Size(516, 457)
+        Me.Controls.Add(Me.cmdMesswerte)
+        Me.Controls.Add(Me.cmdDiagramm)
         Me.Controls.Add(Me.cmdPendel3D)
         Me.Controls.Add(Me.cmdPendel2D)
         Me.Controls.Add(Me.cmdEinstellungen)
         Me.Controls.Add(Me.lblStartÜberschrift)
         Me.Controls.Add(Me.cmdStartStop)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmStart"
         Me.Text = "Start"
         Me.ResumeLayout(False)
@@ -123,5 +141,6 @@ Partial Class frmStart
     Friend WithEvents cmdEinstellungen As System.Windows.Forms.Button
     Friend WithEvents cmdPendel2D As System.Windows.Forms.Button
     Friend WithEvents cmdPendel3D As System.Windows.Forms.Button
-    Friend WithEvents cmddiagramm As System.Windows.Forms.Button
+    Friend WithEvents cmdDiagramm As System.Windows.Forms.Button
+    Friend WithEvents cmdMesswerte As System.Windows.Forms.Button
 End Class
