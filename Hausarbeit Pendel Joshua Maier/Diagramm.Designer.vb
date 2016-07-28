@@ -35,40 +35,36 @@ Partial Class frmDiagramm
         '
         'cmdautoscale
         '
-        Me.cmdautoscale.Location = New System.Drawing.Point(70, 42)
-        Me.cmdautoscale.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdautoscale.Location = New System.Drawing.Point(47, 27)
         Me.cmdautoscale.Name = "cmdautoscale"
-        Me.cmdautoscale.Size = New System.Drawing.Size(112, 35)
+        Me.cmdautoscale.Size = New System.Drawing.Size(75, 23)
         Me.cmdautoscale.TabIndex = 0
         Me.cmdautoscale.Text = "Autoscale"
         Me.cmdautoscale.UseVisualStyleBackColor = True
         '
         'cmdreset
         '
-        Me.cmdreset.Location = New System.Drawing.Point(412, 40)
-        Me.cmdreset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdreset.Location = New System.Drawing.Point(275, 26)
         Me.cmdreset.Name = "cmdreset"
-        Me.cmdreset.Size = New System.Drawing.Size(112, 35)
+        Me.cmdreset.Size = New System.Drawing.Size(75, 23)
         Me.cmdreset.TabIndex = 1
         Me.cmdreset.Text = "Reset"
         Me.cmdreset.UseVisualStyleBackColor = True
         '
         'cmdzoomout
         '
-        Me.cmdzoomout.Location = New System.Drawing.Point(291, 40)
-        Me.cmdzoomout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdzoomout.Location = New System.Drawing.Point(194, 26)
         Me.cmdzoomout.Name = "cmdzoomout"
-        Me.cmdzoomout.Size = New System.Drawing.Size(112, 35)
+        Me.cmdzoomout.Size = New System.Drawing.Size(75, 23)
         Me.cmdzoomout.TabIndex = 2
         Me.cmdzoomout.Text = "Zoom out"
         Me.cmdzoomout.UseVisualStyleBackColor = True
         '
         'cmdzoomin
         '
-        Me.cmdzoomin.Location = New System.Drawing.Point(534, 40)
-        Me.cmdzoomin.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmdzoomin.Location = New System.Drawing.Point(356, 26)
         Me.cmdzoomin.Name = "cmdzoomin"
-        Me.cmdzoomin.Size = New System.Drawing.Size(112, 35)
+        Me.cmdzoomin.Size = New System.Drawing.Size(75, 23)
         Me.cmdzoomin.TabIndex = 4
         Me.cmdzoomin.Text = "Zoom in"
         Me.cmdzoomin.UseVisualStyleBackColor = True
@@ -78,10 +74,9 @@ Partial Class frmDiagramm
         Me.chkAccel.AutoSize = True
         Me.chkAccel.Checked = True
         Me.chkAccel.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkAccel.Location = New System.Drawing.Point(207, 86)
-        Me.chkAccel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.chkAccel.Location = New System.Drawing.Point(138, 56)
         Me.chkAccel.Name = "chkAccel"
-        Me.chkAccel.Size = New System.Drawing.Size(149, 24)
+        Me.chkAccel.Size = New System.Drawing.Size(102, 17)
         Me.chkAccel.TabIndex = 5
         Me.chkAccel.Text = "Beschleunigung"
         Me.chkAccel.UseVisualStyleBackColor = True
@@ -89,10 +84,9 @@ Partial Class frmDiagramm
         'chkSpeed
         '
         Me.chkSpeed.AutoSize = True
-        Me.chkSpeed.Location = New System.Drawing.Point(369, 85)
-        Me.chkSpeed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.chkSpeed.Location = New System.Drawing.Point(246, 55)
         Me.chkSpeed.Name = "chkSpeed"
-        Me.chkSpeed.Size = New System.Drawing.Size(151, 24)
+        Me.chkSpeed.Size = New System.Drawing.Size(104, 17)
         Me.chkSpeed.TabIndex = 6
         Me.chkSpeed.Text = "Geschwindigkeit"
         Me.chkSpeed.UseVisualStyleBackColor = True
@@ -100,10 +94,9 @@ Partial Class frmDiagramm
         'chkAuslenkung
         '
         Me.chkAuslenkung.AutoSize = True
-        Me.chkAuslenkung.Location = New System.Drawing.Point(534, 85)
-        Me.chkAuslenkung.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.chkAuslenkung.Location = New System.Drawing.Point(356, 55)
         Me.chkAuslenkung.Name = "chkAuslenkung"
-        Me.chkAuslenkung.Size = New System.Drawing.Size(119, 24)
+        Me.chkAuslenkung.Size = New System.Drawing.Size(82, 17)
         Me.chkAuslenkung.TabIndex = 7
         Me.chkAuslenkung.Text = "Auslenkung"
         Me.chkAuslenkung.UseVisualStyleBackColor = True
@@ -112,10 +105,9 @@ Partial Class frmDiagramm
         '
         Me.optpunkte.AutoSize = True
         Me.optpunkte.Checked = True
-        Me.optpunkte.Location = New System.Drawing.Point(70, 86)
-        Me.optpunkte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.optpunkte.Location = New System.Drawing.Point(47, 56)
         Me.optpunkte.Name = "optpunkte"
-        Me.optpunkte.Size = New System.Drawing.Size(84, 24)
+        Me.optpunkte.Size = New System.Drawing.Size(59, 17)
         Me.optpunkte.TabIndex = 8
         Me.optpunkte.TabStop = True
         Me.optpunkte.Text = "Punkte"
@@ -124,19 +116,18 @@ Partial Class frmDiagramm
         'optlinie
         '
         Me.optlinie.AutoSize = True
-        Me.optlinie.Location = New System.Drawing.Point(70, 123)
-        Me.optlinie.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.optlinie.Location = New System.Drawing.Point(47, 80)
         Me.optlinie.Name = "optlinie"
-        Me.optlinie.Size = New System.Drawing.Size(67, 24)
+        Me.optlinie.Size = New System.Drawing.Size(47, 17)
         Me.optlinie.TabIndex = 9
         Me.optlinie.Text = "Linie"
         Me.optlinie.UseVisualStyleBackColor = True
         '
         'frmDiagramm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(718, 546)
+        Me.ClientSize = New System.Drawing.Size(479, 355)
         Me.Controls.Add(Me.optlinie)
         Me.Controls.Add(Me.optpunkte)
         Me.Controls.Add(Me.chkAuslenkung)
@@ -146,7 +137,6 @@ Partial Class frmDiagramm
         Me.Controls.Add(Me.cmdzoomout)
         Me.Controls.Add(Me.cmdreset)
         Me.Controls.Add(Me.cmdautoscale)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmDiagramm"
         Me.Text = "Diagramm"
         Me.ResumeLayout(False)
