@@ -104,6 +104,7 @@
 
     End Sub
 
+
     Private Sub cmdzoomin_Click(sender As Object, e As EventArgs) Handles cmdzoomin.Click
         zoom = zoom * 2
     End Sub
