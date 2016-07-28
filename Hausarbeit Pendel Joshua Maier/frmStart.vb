@@ -13,6 +13,7 @@
         Me.Top = 10
         Me.Width = 400
         Me.Height = 345
+        Me.gfxTimer.Start()
     End Sub
 
     Private Sub cmdPendel2D_Click(sender As Object, e As EventArgs) Handles cmdPendel2D.Click
@@ -32,10 +33,10 @@
     End Sub
 
     Private Sub cmdStartStop_Click(sender As Object, e As EventArgs) Handles cmdStartStop.Click
-        If Timer1.Enabled = False Then                              'Start / Stop. Timer jeweils umschalten
-            Timer1.Enabled = True
+        If physTimer.Enabled = False Then                              'Start / Stop. Timer jeweils umschalten
+            physTimer.Enabled = True
         Else
-            Timer1.Enabled = False
+            physTimer.Enabled = False
         End If
     End Sub
 
@@ -53,7 +54,7 @@
     End Sub
 
     Private Sub cmdEinstellungen_Click(sender As Object, e As EventArgs) Handles cmdEinstellungen.Click
-        If Timer1.Enabled = False Then
+        If physTimer.Enabled = False Then
             frmEinstellungen.Show()
             For Each ctl In Me.Controls
                 If TypeOf ctl Is Button Then
@@ -61,7 +62,7 @@
                 End If
             Next
         Else
-            Timer1.Enabled = False
+            physTimer.Enabled = False
         End If
     End Sub
 
@@ -79,7 +80,7 @@
 
     Public Zoom As Integer
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 
         WinkelAccel = -g / l * Math.Sin(WinkelAuslenk) - WinkelSpeed * 0.1 * 1.9
         WinkelSpeed = WinkelSpeed + WinkelAccel * 0.1
@@ -105,6 +106,16 @@
         End If
 
 
+        'Refresh()
+        'frmDiagramm.Refresh()
+        'frmPendel.Refresh()
+        'frmPendel3D.Refresh()
+
+
+
+    End Sub
+
+    Private Sub gfxTimer_Tick(sender As Object, e As EventArgs) Handles gfxTimer.Tick
         Refresh()
         frmDiagramm.Refresh()
         frmPendel.Refresh()
