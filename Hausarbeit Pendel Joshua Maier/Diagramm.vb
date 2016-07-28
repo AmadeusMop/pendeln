@@ -117,6 +117,12 @@
     End Sub
 
     Private Sub cmdautoscale_Click(sender As Object, e As EventArgs) Handles cmdautoscale.Click
-        zoom = 1.0
+        'Autoscale sets the scale factor to be equal to (half of graph height) / (magnitude of the data point with the highest magnitude).
+        'Therefore, that data point will have a height equal to half the graph height, which means it and all smaller data points
+        '(that is, all data points) will fit neatly inside the graph.
+
+        zoom = HoeheDiagramm / (2 * {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max())
+        Debug.WriteLine(zoom)
+        Debug.WriteLine(1 / zoom)
     End Sub
 End Class
