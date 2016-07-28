@@ -154,7 +154,7 @@
 
 
 
-        If chkKoordinatensystem.Checked = True Then                                                             'Wenn Checkbox "Koordinatensystem anzeigen" angeklickt ist, wird Folgendes berechnet:
+        If chkKoordinatensystem.Checked Then                                                             'Wenn Checkbox "Koordinatensystem anzeigen" angeklickt ist, wird Folgendes berechnet:
             xNull(8) = yNull(8) = 0                                                                             'Der Urpsrung
             xNull(9) = 50                                                                                       'Endpunkt der x-Achse
             yNull(9) = 0                                                                                        'Ist bei der Koordinaten xNull(9) = 50 und yNull(9) = 0

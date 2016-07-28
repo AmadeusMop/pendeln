@@ -65,7 +65,7 @@
         frmPendel3D.Tiefe = cmbTiefe.Text
 
 
-        If a = True Then                                                            ' ? Alles ok ?
+        If a Then                                                            ' ? Alles ok ?
             frmStart.WinkelAuslenk = frmStart.WinkelAuslenk * Math.PI / 180                 'ja, dann ° --> Bogenmaß und Wert
             Me.Hide()
             For Each ctl In frmStart.Controls
@@ -82,7 +82,7 @@
 
 
 
-  
+
 
 
 End Class

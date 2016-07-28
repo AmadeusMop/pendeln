@@ -23,7 +23,8 @@ Partial Class frmStart
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.physTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.gfxTimer = New System.Windows.Forms.Timer(Me.components)
         Me.cmdStartStop = New System.Windows.Forms.Button()
         Me.lblStartÜberschrift = New System.Windows.Forms.Label()
         Me.cmdEinstellungen = New System.Windows.Forms.Button()
@@ -32,8 +33,13 @@ Partial Class frmStart
         Me.cmddiagramm = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Timer1
+        'physTimer
         '
+        Me.physTimer.Interval = 100 '10 Hz
+        '
+        'gfxTimer
+        '
+        Me.gfxTimer.Interval = 20 '50 FPS
         '
         'cmdStartStop
         '
@@ -110,7 +116,8 @@ Partial Class frmStart
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents physTimer As System.Windows.Forms.Timer
+    Friend WithEvents gfxTimer As System.Windows.Forms.Timer
     Friend WithEvents cmdStartStop As System.Windows.Forms.Button
     Friend WithEvents lblStartÜberschrift As System.Windows.Forms.Label
     Friend WithEvents cmdEinstellungen As System.Windows.Forms.Button
