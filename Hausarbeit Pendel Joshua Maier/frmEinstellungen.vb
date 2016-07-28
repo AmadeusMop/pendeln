@@ -65,7 +65,7 @@
         frmPendel3D.Tiefe = cmbTiefe.Text
 
 
-        If a = True Then                                                            'Wenn alle Werte eingegeben und möglich sind
+        If a Then                                                            'Wenn alle Werte eingegeben und möglich sind
             frmStart.WinkelAuslenk = frmStart.WinkelAuslenk * Math.PI / 180         'dann Umrechnung von ° in Bogenmaß und Ausgabe des Wertes
             Me.Hide()
             For Each ctl In frmStart.Controls
