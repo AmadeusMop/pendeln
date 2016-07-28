@@ -13,6 +13,7 @@
         Me.Top = 10
         Me.Width = 400
         Me.Height = 345
+        Me.gfxTimer.Start()
     End Sub
 
     Private Sub cmdPendel2D_Click(sender As Object, e As EventArgs) Handles cmdPendel2D.Click
@@ -105,6 +106,16 @@
         End If
 
 
+        'Refresh()
+        'frmDiagramm.Refresh()
+        'frmPendel.Refresh()
+        'frmPendel3D.Refresh()
+
+
+
+    End Sub
+
+    Private Sub gfxTimer_Tick(sender As Object, e As EventArgs) Handles gfxTimer.Tick
         Refresh()
         frmDiagramm.Refresh()
         frmPendel.Refresh()
