@@ -6,6 +6,8 @@
         Me.Top = 10
         Me.Width = 650
         Me.Height = 600
+
+        Me.zoom = 1.0
     End Sub
 
 
@@ -31,8 +33,8 @@
     Dim sinAccel As New Pen(Color.Green, 2)
     Dim alphamax As Decimal
 
-    
-    
+    Dim zoom As Decimal
+
     Private Sub frmDiagramm_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
 
         HoeheDiagramm = Me.Height - 200
@@ -51,14 +53,14 @@
             x0 = xUrsprungx + (i - 1) * BreiteDiagramm / 100
             x1 = xUrsprungx + (i) * BreiteDiagramm / 100
 
-            yAccel0 = xUrsprungy - frmStart.alphaa(i - 1) * frmStart.Zoom
-            yAccel1 = xUrsprungy - frmStart.alphaa(i) * frmStart.Zoom
+            yAccel0 = xUrsprungy - frmStart.alphaa(i - 1) * zoom
+            yAccel1 = xUrsprungy - frmStart.alphaa(i) * zoom
 
-            ySpeed0 = xUrsprungy - frmStart.alphas(i - 1) * frmStart.Zoom
-            ySpeed1 = xUrsprungy - frmStart.alphas(i) * frmStart.Zoom
+            ySpeed0 = xUrsprungy - frmStart.alphas(i - 1) * zoom
+            ySpeed1 = xUrsprungy - frmStart.alphas(i) * zoom
 
-            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i - 1) * frmStart.Zoom
-            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i) * frmStart.Zoom
+            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i - 1) * zoom
+            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i) * zoom
 
 
 
@@ -66,12 +68,12 @@
 
                 If chkAccel.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
-                    e.Graphics.DrawLine(sinAuslenkung, x0, yAccel0, x1, yAccel1)
+                    e.Graphics.DrawLine(sinAccel, x0, yAccel0, x1, yAccel1)
                 End If
 
                 If chkSpeed.Checked = True Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
-                    e.Graphics.DrawLine(sinAuslenkung, x0, ySpeed0, x1, ySpeed1)
+                    e.Graphics.DrawLine(sinSpeed, x0, ySpeed0, x1, ySpeed1)
                 End If
 
                 If chkAuslenkung.Checked = True Then
@@ -99,6 +101,16 @@
         Next
 
     End Sub
-   
 
+    Private Sub cmdzoomin_Click(sender As Object, e As EventArgs) Handles cmdzoomin.Click
+        zoom = zoom * 2
+    End Sub
+
+    Private Sub cmdzoomout_Click(sender As Object, e As EventArgs) Handles cmdzoomout.Click
+        zoom = zoom / 2
+    End Sub
+
+    Private Sub cmdreset_Click(sender As Object, e As EventArgs) Handles cmdreset.Click
+        zoom = 1.0
+    End Sub
 End Class
