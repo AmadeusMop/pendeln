@@ -78,6 +78,7 @@
     Public WinkelAuslenk As Decimal
 
     Public n As Decimal
+    Public zeit As Integer
 
     Public alphawa(100) As Decimal            '-> 101 Positionen!     
     Public alphas(100) As Decimal
@@ -87,10 +88,11 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 
+        zeit = zeit + 1
+
         WinkelAccel = -g / l * Math.Sin(WinkelAuslenk) - WinkelSpeed * 0.1 * 1.9
         WinkelSpeed = WinkelSpeed + WinkelAccel * 0.1
         WinkelAuslenk = WinkelAuslenk + WinkelSpeed * 0.1
-
 
         If n < 100 Then
             alphaa(n) = WinkelAccel
@@ -99,7 +101,6 @@
 
             n = n + 1
         Else
-
             For i = 0 To 99
                 alphaa(i) = alphaa(i + 1)
                 alphaa(100) = WinkelAccel

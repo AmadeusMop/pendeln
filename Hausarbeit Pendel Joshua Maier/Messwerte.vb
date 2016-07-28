@@ -15,11 +15,10 @@
         accel = frmStart.alphaa(lastIndex)
         speed = frmStart.alphas(lastIndex)
         auslenk = frmStart.alphawa(lastIndex)
-        time = frmStart.n
 
         boxAccel.Text = accel
         boxSpeed.Text = speed
         boxAuslenk.Text = auslenk
-        boxTime.Text = time
+        boxTime.Text = String.Format("{0:N1}", frmStart.zeit / 10.0)
     End Sub
 End Class
