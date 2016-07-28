@@ -106,6 +106,7 @@
 
 
         Refresh()
+        frmDiagramm.Refresh()
         frmPendel.Refresh()
         frmPendel3D.Refresh()
 
