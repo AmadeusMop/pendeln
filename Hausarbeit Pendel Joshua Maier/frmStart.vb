@@ -43,7 +43,6 @@
     Private Sub cmddiagramm_Click(sender As Object, e As EventArgs) Handles cmddiagramm.Click
         If frmDiagramm.Visible = False Then
             frmDiagramm.Show()
-            Zoom = 100
         Else
             frmDiagramm.Hide()
 

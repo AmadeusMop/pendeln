@@ -21,6 +21,7 @@
 
     Dim x0 As Decimal
     Dim x1 As Decimal
+    Dim dx As Decimal
     Dim yAuslenkung0 As Decimal
     Dim yAuslenkung1 As Decimal
     Dim ySpeed0 As Decimal
@@ -41,7 +42,8 @@
         BreiteDiagramm = Me.Width - 20
         xUrsprungx = 10
         xUrsprungy = 350
-        
+
+        dx = BreiteDiagramm / 100
 
         With e.Graphics
             .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
@@ -49,9 +51,9 @@
             .DrawLine(xAchse, xUrsprungx, xUrsprungy, xUrsprungx + BreiteDiagramm, xUrsprungy)
         End With
 
-        For i = 1 To frmStart.n - 1
-            x0 = xUrsprungx + (i - 1) * BreiteDiagramm / 100
-            x1 = xUrsprungx + (i) * BreiteDiagramm / 100
+        For i = Math.Max(1, frmStart.n - 101) To frmStart.n - 1
+            x0 = xUrsprungx + (i - 1) * dx
+            x1 = x0 + dx
 
             yAccel0 = xUrsprungy - frmStart.alphaa(i - 1) * zoom
             yAccel1 = xUrsprungy - frmStart.alphaa(i) * zoom
@@ -111,6 +113,10 @@
     End Sub
 
     Private Sub cmdreset_Click(sender As Object, e As EventArgs) Handles cmdreset.Click
+        zoom = 1.0
+    End Sub
+
+    Private Sub cmdautoscale_Click(sender As Object, e As EventArgs) Handles cmdautoscale.Click
         zoom = 1.0
     End Sub
 End Class
