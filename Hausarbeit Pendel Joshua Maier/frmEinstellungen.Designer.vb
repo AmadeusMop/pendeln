@@ -216,7 +216,7 @@ Partial Class frmEinstellungen
         Me.cmbBreite.Name = "cmbBreite"
         Me.cmbBreite.Size = New System.Drawing.Size(121, 24)
         Me.cmbBreite.TabIndex = 16
-        Me.cmbBreite.Text = "40"
+        Me.cmbBreite.Text = "80"
         '
         'cmbHoehe
         '
@@ -265,7 +265,7 @@ Partial Class frmEinstellungen
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmEinstellungen"
-        Me.Text = "Form1"
+        Me.Text = "Einstellungen"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

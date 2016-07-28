@@ -26,3 +26,4 @@ C:\Users\Joshua\Documents\Visual Studio 2013\Projects\Hausarbeit Pendel Joshua M
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\Hausarbeit Pendel Joshua Maier\Hausarbeit Pendel Joshua Maier\obj\Debug\Hausarbeit Pendel Joshua Maier.vbproj.GenerateResource.Cache
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\Hausarbeit Pendel Joshua Maier\Hausarbeit Pendel Joshua Maier\obj\Debug\Hausarbeit_Pendel_Joshua_Maier.frmPendel3D.resources
 C:\Users\Joshua\Documents\Visual Studio 2013\Projects\Hausarbeit Pendel Joshua Maier\Hausarbeit Pendel Joshua Maier\obj\Debug\Hausarbeit Pendel Joshua Maier.vbprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\Visual Studio 2013\Projects\Hausarbeit Pendel Joshua Maier\Hausarbeit Pendel Joshua Maier\obj\Debug\Hausarbeit_Pendel_Joshua_Maier.frmDiagramm.resources

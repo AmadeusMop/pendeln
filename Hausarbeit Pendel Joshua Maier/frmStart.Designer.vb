@@ -23,23 +23,14 @@ Partial Class frmStart
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lblTimer = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.cmdStartStop = New System.Windows.Forms.Button()
         Me.lblStartÜberschrift = New System.Windows.Forms.Label()
         Me.cmdEinstellungen = New System.Windows.Forms.Button()
         Me.cmdPendel2D = New System.Windows.Forms.Button()
         Me.cmdPendel3D = New System.Windows.Forms.Button()
+        Me.cmddiagramm = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'lblTimer
-        '
-        Me.lblTimer.AutoSize = True
-        Me.lblTimer.Location = New System.Drawing.Point(141, 80)
-        Me.lblTimer.Name = "lblTimer"
-        Me.lblTimer.Size = New System.Drawing.Size(33, 13)
-        Me.lblTimer.TabIndex = 0
-        Me.lblTimer.Text = "Timer"
         '
         'Timer1
         '
@@ -47,7 +38,7 @@ Partial Class frmStart
         'cmdStartStop
         '
         Me.cmdStartStop.Enabled = False
-        Me.cmdStartStop.Location = New System.Drawing.Point(240, 133)
+        Me.cmdStartStop.Location = New System.Drawing.Point(137, 243)
         Me.cmdStartStop.Name = "cmdStartStop"
         Me.cmdStartStop.Size = New System.Drawing.Size(75, 23)
         Me.cmdStartStop.TabIndex = 1
@@ -86,35 +77,44 @@ Partial Class frmStart
         'cmdPendel3D
         '
         Me.cmdPendel3D.Enabled = False
-        Me.cmdPendel3D.Location = New System.Drawing.Point(30, 248)
+        Me.cmdPendel3D.Location = New System.Drawing.Point(233, 196)
         Me.cmdPendel3D.Name = "cmdPendel3D"
         Me.cmdPendel3D.Size = New System.Drawing.Size(75, 23)
         Me.cmdPendel3D.TabIndex = 5
         Me.cmdPendel3D.Text = "Pendel 3D"
         Me.cmdPendel3D.UseVisualStyleBackColor = True
         '
+        'cmddiagramm
+        '
+        Me.cmddiagramm.Location = New System.Drawing.Point(233, 133)
+        Me.cmddiagramm.Name = "cmddiagramm"
+        Me.cmddiagramm.Size = New System.Drawing.Size(75, 23)
+        Me.cmddiagramm.TabIndex = 6
+        Me.cmddiagramm.Text = "Diagramm"
+        Me.cmddiagramm.UseVisualStyleBackColor = True
+        '
         'frmStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(344, 297)
+        Me.Controls.Add(Me.cmddiagramm)
         Me.Controls.Add(Me.cmdPendel3D)
         Me.Controls.Add(Me.cmdPendel2D)
         Me.Controls.Add(Me.cmdEinstellungen)
         Me.Controls.Add(Me.lblStartÜberschrift)
         Me.Controls.Add(Me.cmdStartStop)
-        Me.Controls.Add(Me.lblTimer)
         Me.Name = "frmStart"
-        Me.Text = "frmStart"
+        Me.Text = "Start"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblTimer As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents cmdStartStop As System.Windows.Forms.Button
     Friend WithEvents lblStartÜberschrift As System.Windows.Forms.Label
     Friend WithEvents cmdEinstellungen As System.Windows.Forms.Button
     Friend WithEvents cmdPendel2D As System.Windows.Forms.Button
     Friend WithEvents cmdPendel3D As System.Windows.Forms.Button
+    Friend WithEvents cmddiagramm As System.Windows.Forms.Button
 End Class

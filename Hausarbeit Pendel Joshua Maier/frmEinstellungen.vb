@@ -1,5 +1,14 @@
 ﻿Public Class frmEinstellungen
 
+    Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load
+        cmbStandort.SelectedIndex = 2
+        DoubleBuffered = True
+        Me.Left = 10
+        Me.Top = 10
+        Me.Width = 450
+        Me.Height = 600
+    End Sub
+
     Private Sub cmdEinstellspeich_Click(sender As Object, e As EventArgs) Handles cmdEinstellspeich.Click
 
         Dim a As Boolean = True                                         'Boolsche Var. zur Prüfung der Gültigkeit von Eingaben
@@ -64,23 +73,16 @@
                     DirectCast(ctl, Button).Enabled = True
                 End If
             Next
+            frmStart.n = 0
         Else : MessageBox.Show("Ungültige Eingabe-! Verwenden Sie nur Zahlen!")         'nein, dann Fehlermeldung
         End If
 
 
     End Sub
 
-    Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load
-        cmbStandort.SelectedIndex = 2
-
-        Me.Top = 450
-    End Sub
 
 
-
-    'Private Sub lblPhyVor_Click(sender As Object, e As EventArgs) Handles lblPhyVor.Click
-
-    'End Sub
+  
 
 
 End Class
