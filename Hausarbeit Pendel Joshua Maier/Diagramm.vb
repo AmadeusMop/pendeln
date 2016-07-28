@@ -66,36 +66,36 @@
 
 
 
-            If optlinie.Checked = True Then
+            If optlinie.Checked Then
 
-                If chkAccel.Checked = True Then
+                If chkAccel.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinAccel, x0, yAccel0, x1, yAccel1)
                 End If
 
-                If chkSpeed.Checked = True Then
+                If chkSpeed.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinSpeed, x0, ySpeed0, x1, ySpeed1)
                 End If
 
-                If chkAuslenkung.Checked = True Then
+                If chkAuslenkung.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.DrawLine(sinAuslenkung, x0, yAuslenkung0, x1, yAuslenkung1)
                 End If
 
             Else
 
-                If chkAccel.Checked = True Then
+                If chkAccel.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Green, x0 - 2, yAccel0 - 2, 4, 4)
                 End If
 
-                If chkSpeed.Checked = True Then
+                If chkSpeed.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Blue, x0 - 2, ySpeed0 - 2, 4, 4)
                 End If
 
-                If chkAuslenkung.Checked = True Then
+                If chkAuslenkung.Checked Then
                     e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                     e.Graphics.FillEllipse(Brushes.Red, x0 - 2, yAuslenkung0 - 2, 4, 4)
                 End If
