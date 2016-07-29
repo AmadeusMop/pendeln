@@ -91,7 +91,7 @@
         WinkelSpeed = WinkelSpeed + WinkelAccel * 0.1
         WinkelAuslenk = WinkelAuslenk + WinkelSpeed * 0.1
 
-        If zeit < 101 Then
+        If zeit <= 100 Then
             alphaa(zeit) = WinkelAccel
             alphas(zeit) = WinkelSpeed
             alphawa(zeit) = WinkelAuslenk
