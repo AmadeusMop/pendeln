@@ -40,16 +40,16 @@
         HoeheDiagramm = Me.Height - 200
         BreiteDiagramm = Me.Width - 20
         xUrsprungx = 10
-        xUrsprungy = 150
+        xUrsprungy = 150 + HoeheDiagramm / 2
 
         auto_scale(True)
 
         dx = BreiteDiagramm / 100
 
         With e.Graphics
-            .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy, BreiteDiagramm, HoeheDiagramm)
-            .FillRectangle(Brushes.White, xUrsprungx, xUrsprungy, BreiteDiagramm, HoeheDiagramm)
-            .DrawLine(xAchse, xUrsprungx, xUrsprungy + HoeheDiagramm / 2, xUrsprungx + BreiteDiagramm, xUrsprungy + HoeheDiagramm / 2)
+            .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
+            .FillRectangle(Brushes.White, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
+            .DrawLine(xAchse, xUrsprungx, xUrsprungy, xUrsprungx + BreiteDiagramm, xUrsprungy)
         End With
 
         For i = 1 To Math.Min(frmStart.zeit - 2, 100)
