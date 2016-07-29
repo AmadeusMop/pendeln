@@ -99,15 +99,15 @@
 
             n = n + 1
         Else
-            For i = 0 To 99
+            For i = 0 To 98
                 alphaa(i) = alphaa(i + 1)
                 alphas(i) = alphas(i + 1)
                 alphawa(i) = alphawa(i + 1)
             Next
 
-            alphaa(100) = WinkelAccel
-            alphas(100) = WinkelSpeed
-            alphawa(100) = WinkelAuslenk
+            alphaa(99) = WinkelAccel
+            alphas(99) = WinkelSpeed
+            alphawa(99) = WinkelAuslenk
         End If
 
 
