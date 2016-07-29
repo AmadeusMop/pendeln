@@ -44,8 +44,6 @@
         xUrsprungx = 10
         xUrsprungy = 150 + HoeheDiagramm / 2
 
-        auto_scale(True)
-
         dx = BreiteDiagramm / 100
 
         With e.Graphics
