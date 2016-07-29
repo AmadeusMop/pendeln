@@ -2,6 +2,7 @@
 
     Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load         'Bestimmung von Standard-Werten beim Laden des Fensters
         cmbStandort.SelectedIndex = 2                                                           'Standard-Wert für den Standort ist der Wert aus der Combo Box mit dem Index 2 (gezählt wird 0, 1, 2, ...), die Erde.
+        cmbReibung.SelectedIndex = 7
         DoubleBuffered = True                                                                   'Zur Vermeidung des Flackerns
         Me.Left = 10                                                                            '10 Einheiten vom linken Bildschirmrand entfernt
         Me.Top = 10                                                                             '10 Einheiten vom oberen Bildschirmrand entfernt
@@ -73,17 +74,13 @@
                     DirectCast(ctl, Button).Enabled = True
                 End If
             Next
-            frmStart.n = 0
+
             frmStart.zeit = 0
+            frmStart.reibung = cmbReibung.SelectedItem
+
         Else : MessageBox.Show("Ungültige Eingabe-! Verwenden Sie nur Zahlen!")         'Else: andernfalls, bezogen auf "If a = True". Wenn Else, dann Fehlermeldung wie angezeigt.
         End If
 
 
     End Sub
-
-
-
-  
-
-
 End Class

@@ -7,11 +7,7 @@
         Me.Width = 650                                                              'Breite = 650 Einheiten
         Me.Height = 600                                                             'Hoehe = 600 Einheiten
         Me.HoeheDiagramm = Height - 200
-        Try
-            cmdautoscale_Click(vbNull, EventArgs.Empty)
-        Catch ex As System.DivideByZeroException
-            Me.zoom = 1
-        End Try
+        auto_scale(False)
     End Sub
 
 
@@ -47,6 +43,8 @@
         xUrsprungx = 10
         xUrsprungy = 350
 
+        auto_scale(True)
+
         dx = BreiteDiagramm / 100
 
         With e.Graphics
@@ -55,18 +53,18 @@
             .DrawLine(xAchse, xUrsprungx, xUrsprungy, xUrsprungx + BreiteDiagramm, xUrsprungy)
         End With
 
-        For i = 0 To Math.Min(frmStart.zeit, frmStart.alphaa.Length) - 2
-            x0 = xUrsprungx + i * dx
+        For i = 1 To Math.Min(frmStart.zeit - 2, 100)
+            x0 = xUrsprungx + (i - 1) * dx
             x1 = x0 + dx
 
-            yAccel0 = xUrsprungy - frmStart.alphaa(i) * zoom
-            yAccel1 = xUrsprungy - frmStart.alphaa(i + 1) * zoom
+            yAccel0 = xUrsprungy - frmStart.alphaa(i - 1) * zoom
+            yAccel1 = xUrsprungy - frmStart.alphaa(i) * zoom
 
-            ySpeed0 = xUrsprungy - frmStart.alphas(i) * zoom
-            ySpeed1 = xUrsprungy - frmStart.alphas(i + 1) * zoom
+            ySpeed0 = xUrsprungy - frmStart.alphas(i - 1) * zoom
+            ySpeed1 = xUrsprungy - frmStart.alphas(i) * zoom
 
-            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i) * zoom
-            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i + 1) * zoom
+            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i - 1) * zoom
+            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i) * zoom
 
 
 
@@ -120,19 +118,31 @@
         zoom = 1.0
     End Sub
 
-    Public Sub auto_scale(scaleVal As Decimal)
+    Public Sub auto_scale(onlyIfBoundsExceeded As Boolean)
         'Autoscale sets the scale factor to be equal to (half of graph height) / (magnitude of the data point with the highest magnitude).
         'Therefore, that data point will have a height equal to half the graph height, which means it and all smaller data points
         '(that is, all data points) will fit neatly inside the graph.
 
-        zoom = HoeheDiagramm / (2 * scaleVal)
+        Dim scaleVal As Decimal
+        Dim tmpZoom As Decimal
 
-        Debug.WriteLine(zoom)
-        Debug.WriteLine(1 / zoom)
+        scaleVal = {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max()
+
+        If scaleVal > 0 Then                                    'to avoid zero-division
+            tmpZoom = HoeheDiagramm / (2 * scaleVal)
+
+            If onlyIfBoundsExceeded Then
+                'autoscale only when the data exceeds the bounds of the graph
+                zoom = Math.Min(zoom, tmpZoom)
+            Else
+                zoom = tmpZoom
+            End If
+        Else
+            zoom = 1.0
+        End If
     End Sub
 
     Public Sub cmdautoscale_Click(sender As Object, e As EventArgs) Handles cmdautoscale.Click
-        ' errors if there are no previous acceleration/velocity/displacement values
-        auto_scale({frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max())
+        auto_scale(False)
     End Sub
 End Class

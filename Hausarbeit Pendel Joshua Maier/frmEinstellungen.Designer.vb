@@ -62,7 +62,7 @@ Partial Class frmEinstellungen
         Me.lblWinkelAuslenk.Location = New System.Drawing.Point(17, 110)
         Me.lblWinkelAuslenk.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWinkelAuslenk.Name = "lblWinkelAuslenk"
-        Me.lblWinkelAuslenk.Size = New System.Drawing.Size(142, 16)
+        Me.lblWinkelAuslenk.Size = New System.Drawing.Size(214, 25)
         Me.lblWinkelAuslenk.TabIndex = 1
         Me.lblWinkelAuslenk.Text = "Winkel Auslenkung in °"
         '
@@ -71,7 +71,7 @@ Partial Class frmEinstellungen
         Me.txtWinkelMax.Location = New System.Drawing.Point(284, 107)
         Me.txtWinkelMax.Margin = New System.Windows.Forms.Padding(4)
         Me.txtWinkelMax.Name = "txtWinkelMax"
-        Me.txtWinkelMax.Size = New System.Drawing.Size(132, 22)
+        Me.txtWinkelMax.Size = New System.Drawing.Size(132, 30)
         Me.txtWinkelMax.TabIndex = 2
         Me.txtWinkelMax.Text = "45"
         '
@@ -82,7 +82,7 @@ Partial Class frmEinstellungen
         Me.lblEinstellungenÜberschrift.Location = New System.Drawing.Point(102, 30)
         Me.lblEinstellungenÜberschrift.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEinstellungenÜberschrift.Name = "lblEinstellungenÜberschrift"
-        Me.lblEinstellungenÜberschrift.Size = New System.Drawing.Size(248, 24)
+        Me.lblEinstellungenÜberschrift.Size = New System.Drawing.Size(363, 33)
         Me.lblEinstellungenÜberschrift.TabIndex = 3
         Me.lblEinstellungenÜberschrift.Text = "Einstellungen / Vorgaben"
         '
@@ -93,7 +93,7 @@ Partial Class frmEinstellungen
         Me.lblPhyVor.Location = New System.Drawing.Point(10, 77)
         Me.lblPhyVor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPhyVor.Name = "lblPhyVor"
-        Me.lblPhyVor.Size = New System.Drawing.Size(199, 20)
+        Me.lblPhyVor.Size = New System.Drawing.Size(292, 29)
         Me.lblPhyVor.TabIndex = 4
         Me.lblPhyVor.Text = "Physikalische Vorgaben"
         '
@@ -104,7 +104,7 @@ Partial Class frmEinstellungen
         Me.Label1.Location = New System.Drawing.Point(10, 214)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 20)
+        Me.Label1.Size = New System.Drawing.Size(135, 29)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Pendel 2D"
         '
@@ -115,7 +115,7 @@ Partial Class frmEinstellungen
         Me.lbll.Location = New System.Drawing.Point(17, 257)
         Me.lbll.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbll.Name = "lbll"
-        Me.lbll.Size = New System.Drawing.Size(108, 16)
+        Me.lbll.Size = New System.Drawing.Size(157, 25)
         Me.lbll.TabIndex = 6
         Me.lbll.Text = "Fadenlänge in m"
         '
@@ -126,7 +126,7 @@ Partial Class frmEinstellungen
         Me.lblr.Location = New System.Drawing.Point(17, 286)
         Me.lblr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblr.Name = "lblr"
-        Me.lblr.Size = New System.Drawing.Size(113, 16)
+        Me.lblr.Size = New System.Drawing.Size(167, 25)
         Me.lblr.TabIndex = 7
         Me.lblr.Text = "Kugelradius in cm"
         '
@@ -135,7 +135,7 @@ Partial Class frmEinstellungen
         Me.txtl.Location = New System.Drawing.Point(284, 254)
         Me.txtl.Margin = New System.Windows.Forms.Padding(4)
         Me.txtl.Name = "txtl"
-        Me.txtl.Size = New System.Drawing.Size(132, 22)
+        Me.txtl.Size = New System.Drawing.Size(132, 30)
         Me.txtl.TabIndex = 8
         Me.txtl.Text = "1"
         '
@@ -144,7 +144,7 @@ Partial Class frmEinstellungen
         Me.txtr.Location = New System.Drawing.Point(284, 283)
         Me.txtr.Margin = New System.Windows.Forms.Padding(4)
         Me.txtr.Name = "txtr"
-        Me.txtr.Size = New System.Drawing.Size(132, 22)
+        Me.txtr.Size = New System.Drawing.Size(132, 30)
         Me.txtr.TabIndex = 9
         Me.txtr.Text = "15"
         '
@@ -155,7 +155,7 @@ Partial Class frmEinstellungen
         Me.lblPlanet.Location = New System.Drawing.Point(17, 142)
         Me.lblPlanet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPlanet.Name = "lblPlanet"
-        Me.lblPlanet.Size = New System.Drawing.Size(46, 16)
+        Me.lblPlanet.Size = New System.Drawing.Size(67, 25)
         Me.lblPlanet.TabIndex = 10
         Me.lblPlanet.Text = "Planet"
         '
@@ -166,7 +166,7 @@ Partial Class frmEinstellungen
         Me.cmbStandort.Location = New System.Drawing.Point(256, 139)
         Me.cmbStandort.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStandort.Name = "cmbStandort"
-        Me.cmbStandort.Size = New System.Drawing.Size(160, 24)
+        Me.cmbStandort.Size = New System.Drawing.Size(160, 33)
         Me.cmbStandort.TabIndex = 11
         '
         'Label2
@@ -176,7 +176,7 @@ Partial Class frmEinstellungen
         Me.Label2.Location = New System.Drawing.Point(10, 344)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 20)
+        Me.Label2.Size = New System.Drawing.Size(135, 29)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Pendel 3D"
         '
@@ -186,7 +186,7 @@ Partial Class frmEinstellungen
         Me.lblBreite.Location = New System.Drawing.Point(17, 380)
         Me.lblBreite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBreite.Name = "lblBreite"
-        Me.lblBreite.Size = New System.Drawing.Size(43, 16)
+        Me.lblBreite.Size = New System.Drawing.Size(62, 25)
         Me.lblBreite.TabIndex = 13
         Me.lblBreite.Text = "Breite"
         '
@@ -196,7 +196,7 @@ Partial Class frmEinstellungen
         Me.lblHoehe.Location = New System.Drawing.Point(17, 407)
         Me.lblHoehe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHoehe.Name = "lblHoehe"
-        Me.lblHoehe.Size = New System.Drawing.Size(41, 16)
+        Me.lblHoehe.Size = New System.Drawing.Size(59, 25)
         Me.lblHoehe.TabIndex = 14
         Me.lblHoehe.Text = "Höhe"
         '
@@ -206,7 +206,7 @@ Partial Class frmEinstellungen
         Me.lblTiefe.Location = New System.Drawing.Point(17, 438)
         Me.lblTiefe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTiefe.Name = "lblTiefe"
-        Me.lblTiefe.Size = New System.Drawing.Size(39, 16)
+        Me.lblTiefe.Size = New System.Drawing.Size(56, 25)
         Me.lblTiefe.TabIndex = 15
         Me.lblTiefe.Text = "Tiefe"
         '
@@ -216,7 +216,7 @@ Partial Class frmEinstellungen
         Me.cmbBreite.Items.AddRange(New Object() {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "60", "70", "80", "90", "100"})
         Me.cmbBreite.Location = New System.Drawing.Point(295, 377)
         Me.cmbBreite.Name = "cmbBreite"
-        Me.cmbBreite.Size = New System.Drawing.Size(121, 24)
+        Me.cmbBreite.Size = New System.Drawing.Size(121, 33)
         Me.cmbBreite.TabIndex = 16
         Me.cmbBreite.Text = "80"
         '
@@ -226,7 +226,7 @@ Partial Class frmEinstellungen
         Me.cmbHoehe.Items.AddRange(New Object() {"10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "120", "140", "160", "180", "200"})
         Me.cmbHoehe.Location = New System.Drawing.Point(295, 404)
         Me.cmbHoehe.Name = "cmbHoehe"
-        Me.cmbHoehe.Size = New System.Drawing.Size(121, 24)
+        Me.cmbHoehe.Size = New System.Drawing.Size(121, 33)
         Me.cmbHoehe.TabIndex = 17
         Me.cmbHoehe.Text = "140"
         '
@@ -236,7 +236,7 @@ Partial Class frmEinstellungen
         Me.cmbTiefe.Items.AddRange(New Object() {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "60", "70", "80", "90", "100"})
         Me.cmbTiefe.Location = New System.Drawing.Point(295, 435)
         Me.cmbTiefe.Name = "cmbTiefe"
-        Me.cmbTiefe.Size = New System.Drawing.Size(121, 24)
+        Me.cmbTiefe.Size = New System.Drawing.Size(121, 33)
         Me.cmbTiefe.TabIndex = 18
         Me.cmbTiefe.Text = "40"
         '
@@ -245,21 +245,22 @@ Partial Class frmEinstellungen
         Me.lblReibung.AutoSize = True
         Me.lblReibung.Location = New System.Drawing.Point(17, 174)
         Me.lblReibung.Name = "lblReibung"
-        Me.lblReibung.Size = New System.Drawing.Size(59, 16)
+        Me.lblReibung.Size = New System.Drawing.Size(84, 25)
         Me.lblReibung.TabIndex = 19
         Me.lblReibung.Text = "Reibung"
         '
         'cmbReibung
         '
         Me.cmbReibung.FormattingEnabled = True
+        Me.cmbReibung.Items.AddRange(New Object() {"0.0", "0.2", "0.5", "0.8", "1.0", "1.2", "1.5", "1.8", "2.0", "2.5", "3.0", "5.0", "8.0", "10.0", "20.0", "50.0", "80.0", "100.0"})
         Me.cmbReibung.Location = New System.Drawing.Point(295, 171)
         Me.cmbReibung.Name = "cmbReibung"
-        Me.cmbReibung.Size = New System.Drawing.Size(121, 24)
+        Me.cmbReibung.Size = New System.Drawing.Size(121, 33)
         Me.cmbReibung.TabIndex = 20
         '
         'frmEinstellungen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(452, 528)
         Me.Controls.Add(Me.cmbReibung)

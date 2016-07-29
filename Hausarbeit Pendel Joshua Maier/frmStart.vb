@@ -78,7 +78,7 @@
     Public WinkelSpeed As Decimal
     Public WinkelAuslenk As Decimal
 
-    Public n As Decimal
+    Public reibung As Decimal
     Public zeit As Integer
 
     Public alphawa(100) As Decimal            '-> 101 Positionen!     
@@ -87,24 +87,24 @@
 
     Private Sub physTimer_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 
-        WinkelAccel = -g / l * Math.Sin(WinkelAuslenk) - WinkelSpeed * 0.1 * 1.9
+        WinkelAccel = -g / l * Math.Sin(WinkelAuslenk) - WinkelSpeed * 0.1 * reibung
         WinkelSpeed = WinkelSpeed + WinkelAccel * 0.1
         WinkelAuslenk = WinkelAuslenk + WinkelSpeed * 0.1
 
-        If zeit < 100 Then
+        If zeit < 101 Then
             alphaa(zeit) = WinkelAccel
             alphas(zeit) = WinkelSpeed
             alphawa(zeit) = WinkelAuslenk
         Else
-            For i = 0 To 98
+            For i = 0 To 99
                 alphaa(i) = alphaa(i + 1)
                 alphas(i) = alphas(i + 1)
                 alphawa(i) = alphawa(i + 1)
             Next
 
-            alphaa(99) = WinkelAccel
-            alphas(99) = WinkelSpeed
-            alphawa(99) = WinkelAuslenk
+            alphaa(100) = WinkelAccel
+            alphas(100) = WinkelSpeed
+            alphawa(100) = WinkelAuslenk
         End If
 
         zeit = zeit + 1
