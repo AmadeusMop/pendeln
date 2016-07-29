@@ -126,7 +126,11 @@
         Dim scaleVal As Decimal
         Dim tmpZoom As Decimal
 
-        scaleVal = {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max()
+        scaleVal = {
+            frmStart.alphaa.Max(), -frmStart.alphaa.Min(),
+            frmStart.alphas.Max(), -frmStart.alphas.Min(),
+            frmStart.alphawa.Max(), -frmStart.alphawa.Min()
+        }.Max()
 
         If scaleVal > 0 Then                                    'to avoid zero-division
             tmpZoom = HoeheDiagramm / (2 * scaleVal)
