@@ -84,9 +84,7 @@
     Public alphas(100) As Decimal
     Public alphaa(100) As Decimal
 
-    Public Zoom As Integer
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
+    Private Sub physTimer_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 
         zeit = zeit + 1
 
@@ -103,20 +101,14 @@
         Else
             For i = 0 To 99
                 alphaa(i) = alphaa(i + 1)
-                alphaa(100) = WinkelAccel
                 alphas(i) = alphas(i + 1)
-                alphas(100) = WinkelSpeed
                 alphawa(i) = alphawa(i + 1)
-                alphawa(100) = WinkelAuslenk
             Next
+
+            alphaa(100) = WinkelAccel
+            alphas(100) = WinkelSpeed
+            alphawa(100) = WinkelAuslenk
         End If
-
-
-        'Refresh()
-        'frmDiagramm.Refresh()
-        'frmPendel.Refresh()
-        'frmPendel3D.Refresh()
-
 
 
     End Sub
