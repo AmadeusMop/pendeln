@@ -44,7 +44,7 @@ Partial Class frmStart
         'cmdStartStop
         '
         Me.cmdStartStop.Enabled = False
-        Me.cmdStartStop.Location = New System.Drawing.Point(206, 370)
+        Me.cmdStartStop.Location = New System.Drawing.Point(202, 164)
         Me.cmdStartStop.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdStartStop.Name = "cmdStartStop"
         Me.cmdStartStop.Size = New System.Drawing.Size(112, 35)
@@ -65,7 +65,7 @@ Partial Class frmStart
         '
         'cmdEinstellungen
         '
-        Me.cmdEinstellungen.Location = New System.Drawing.Point(144, 119)
+        Me.cmdEinstellungen.Location = New System.Drawing.Point(147, 119)
         Me.cmdEinstellungen.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdEinstellungen.Name = "cmdEinstellungen"
         Me.cmdEinstellungen.Size = New System.Drawing.Size(231, 35)
@@ -76,7 +76,7 @@ Partial Class frmStart
         'cmdPendel2D
         '
         Me.cmdPendel2D.Enabled = False
-        Me.cmdPendel2D.Location = New System.Drawing.Point(116, 234)
+        Me.cmdPendel2D.Location = New System.Drawing.Point(116, 280)
         Me.cmdPendel2D.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdPendel2D.Name = "cmdPendel2D"
         Me.cmdPendel2D.Size = New System.Drawing.Size(112, 35)
@@ -87,7 +87,7 @@ Partial Class frmStart
         'cmdPendel3D
         '
         Me.cmdPendel3D.Enabled = False
-        Me.cmdPendel3D.Location = New System.Drawing.Point(298, 234)
+        Me.cmdPendel3D.Location = New System.Drawing.Point(116, 325)
         Me.cmdPendel3D.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdPendel3D.Name = "cmdPendel3D"
         Me.cmdPendel3D.Size = New System.Drawing.Size(112, 35)
@@ -97,7 +97,7 @@ Partial Class frmStart
         '
         'cmdDiagramm
         '
-        Me.cmdDiagramm.Location = New System.Drawing.Point(206, 279)
+        Me.cmdDiagramm.Location = New System.Drawing.Point(298, 280)
         Me.cmdDiagramm.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdDiagramm.Name = "cmdDiagramm"
         Me.cmdDiagramm.Size = New System.Drawing.Size(112, 35)
@@ -107,7 +107,7 @@ Partial Class frmStart
         '
         'cmdMesswerte
         '
-        Me.cmdMesswerte.Location = New System.Drawing.Point(206, 164)
+        Me.cmdMesswerte.Location = New System.Drawing.Point(298, 325)
         Me.cmdMesswerte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmdMesswerte.Name = "cmdMesswerte"
         Me.cmdMesswerte.Size = New System.Drawing.Size(112, 35)
