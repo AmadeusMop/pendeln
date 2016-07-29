@@ -46,6 +46,8 @@
 
         dx = BreiteDiagramm / 100
 
+        auto_scale(True)
+
         With e.Graphics
             .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
             .FillRectangle(Brushes.White, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
