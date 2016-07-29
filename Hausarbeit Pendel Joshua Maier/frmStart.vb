@@ -13,6 +13,7 @@
         Me.Top = 10
         Me.Width = 400
         Me.Height = 345
+        Me.zeit = 0
         Me.gfxTimer.Start()                                                                     'Explanation to gfxTimer
     End Sub
 
@@ -86,18 +87,14 @@
 
     Private Sub physTimer_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 
-        zeit = zeit + 1
-
         WinkelAccel = -g / l * Math.Sin(WinkelAuslenk) - WinkelSpeed * 0.1 * 1.9
         WinkelSpeed = WinkelSpeed + WinkelAccel * 0.1
         WinkelAuslenk = WinkelAuslenk + WinkelSpeed * 0.1
 
-        If n < 100 Then
-            alphaa(n) = WinkelAccel
-            alphas(n) = WinkelSpeed
-            alphawa(n) = WinkelAuslenk
-
-            n = n + 1
+        If zeit < 100 Then
+            alphaa(zeit) = WinkelAccel
+            alphas(zeit) = WinkelSpeed
+            alphawa(zeit) = WinkelAuslenk
         Else
             For i = 0 To 98
                 alphaa(i) = alphaa(i + 1)
@@ -110,6 +107,7 @@
             alphawa(99) = WinkelAuslenk
         End If
 
+        zeit = zeit + 1
 
     End Sub
 

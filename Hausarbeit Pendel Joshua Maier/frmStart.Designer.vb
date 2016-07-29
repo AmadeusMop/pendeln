@@ -36,10 +36,11 @@ Partial Class frmStart
         '
         'physTimer
         '
+        Me.physTimer.Interval = 100
         '
         'gfxTimer
         '
-        Me.gfxTimer.Interval = 20
+        Me.gfxTimer.Interval = 10
         '
         'cmdStartStop
         '

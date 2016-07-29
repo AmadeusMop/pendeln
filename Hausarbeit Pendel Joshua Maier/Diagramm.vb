@@ -55,18 +55,18 @@
             .DrawLine(xAchse, xUrsprungx, xUrsprungy, xUrsprungx + BreiteDiagramm, xUrsprungy)
         End With
 
-        For i = Math.Max(1, frmStart.n - 101) To frmStart.n - 1
-            x0 = xUrsprungx + (i - 1) * dx
+        For i = 0 To Math.Min(frmStart.zeit, frmStart.alphaa.Length) - 2
+            x0 = xUrsprungx + i * dx
             x1 = x0 + dx
 
-            yAccel0 = xUrsprungy - frmStart.alphaa(i - 1) * zoom
-            yAccel1 = xUrsprungy - frmStart.alphaa(i) * zoom
+            yAccel0 = xUrsprungy - frmStart.alphaa(i) * zoom
+            yAccel1 = xUrsprungy - frmStart.alphaa(i + 1) * zoom
 
-            ySpeed0 = xUrsprungy - frmStart.alphas(i - 1) * zoom
-            ySpeed1 = xUrsprungy - frmStart.alphas(i) * zoom
+            ySpeed0 = xUrsprungy - frmStart.alphas(i) * zoom
+            ySpeed1 = xUrsprungy - frmStart.alphas(i + 1) * zoom
 
-            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i - 1) * zoom
-            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i) * zoom
+            yAuslenkung0 = xUrsprungy - frmStart.alphawa(i) * zoom
+            yAuslenkung1 = xUrsprungy - frmStart.alphawa(i + 1) * zoom
 
 
 
