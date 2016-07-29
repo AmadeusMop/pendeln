@@ -7,7 +7,6 @@
         Dim accel As Decimal
         Dim speed As Decimal
         Dim auslenk As Decimal
-        Dim time As Decimal
         Dim lastIndex As Integer
 
         lastIndex = Math.Min(Math.Max(0, frmStart.n - 1), 99)

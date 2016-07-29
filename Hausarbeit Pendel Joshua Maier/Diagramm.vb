@@ -6,7 +6,12 @@
         Me.Top = 10                                                                 '10 Einheiten vom oberen Bildschirmrand entfernt
         Me.Width = 650                                                              'Breite = 650 Einheiten
         Me.Height = 600                                                             'Hoehe = 600 Einheiten
-        Me.zoom = 1.0                                                               'Zoom = 100%
+        Me.HoeheDiagramm = Height - 200
+        Try
+            cmdautoscale_Click(vbNull, EventArgs.Empty)
+        Catch ex As System.DivideByZeroException
+            Me.zoom = 1
+        End Try
     End Sub
 
 
@@ -115,13 +120,19 @@
         zoom = 1.0
     End Sub
 
-    Private Sub cmdautoscale_Click(sender As Object, e As EventArgs) Handles cmdautoscale.Click
+    Public Sub auto_scale(scaleVal As Decimal)
         'Autoscale sets the scale factor to be equal to (half of graph height) / (magnitude of the data point with the highest magnitude).
         'Therefore, that data point will have a height equal to half the graph height, which means it and all smaller data points
         '(that is, all data points) will fit neatly inside the graph.
 
-        zoom = HoeheDiagramm / (2 * {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max())
+        zoom = HoeheDiagramm / (2 * scaleVal)
+
         Debug.WriteLine(zoom)
         Debug.WriteLine(1 / zoom)
+    End Sub
+
+    Public Sub cmdautoscale_Click(sender As Object, e As EventArgs) Handles cmdautoscale.Click
+        ' errors if there are no previous acceleration/velocity/displacement values
+        auto_scale({frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max())
     End Sub
 End Class
