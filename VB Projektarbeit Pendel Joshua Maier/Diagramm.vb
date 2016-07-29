@@ -6,6 +6,8 @@
         Me.Top = 10                                                                 '10 Einheiten vom oberen Bildschirmrand entfernt
         Me.Width = 650                                                              'Breite = 650 Einheiten
         Me.Height = 600                                                             'Hoehe = 600 Einheiten
+
+        Me.Refresh()
         auto_scale(False)
     End Sub
 
@@ -125,16 +127,19 @@
         Dim scaleVal As Decimal
         Dim tmpZoom As Decimal
 
-        scaleVal = {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max()
+        scaleVal = {
+            frmStart.alphaa.Max(), -frmStart.alphaa.Min(),
+            frmStart.alphas.Max(), -frmStart.alphas.Min(),
+            frmStart.alphawa.Max(), -frmStart.alphawa.Min()
+        }.Max()
 
         If scaleVal > 0 Then                                    'to avoid zero-division
-            tmpZoom = HoeheDiagramm / (2 * scaleVal)
-
             If Nurwennaußerhalb Then
                 'autoscale only when the data exceeds the bounds of the graph
+                tmpZoom = HoeheDiagramm / (2 * scaleVal)
                 zoom = Math.Min(zoom, tmpZoom)
             Else
-                zoom = tmpZoom
+                zoom = (Me.Height - 200) / (2 * scaleVal)
             End If
         Else
             zoom = 1.0
