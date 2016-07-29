@@ -2,7 +2,7 @@
 
     Private Sub frmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load         'Bestimmung von Standard-Werten beim Laden des Fensters
         cmbStandort.SelectedIndex = 2                                                           'Standard-Wert für den Standort ist der Wert aus der Combo Box mit dem Index 2 (gezählt wird 0, 1, 2, ...), die Erde.
-        cmbReibung.SelectedIndex = 7
+        cmbReibung.SelectedIndex = 2
         DoubleBuffered = True                                                                   'Zur Vermeidung des Flackerns
         Me.Left = 10                                                                            '10 Einheiten vom linken Bildschirmrand entfernt
         Me.Top = 10                                                                             '10 Einheiten vom oberen Bildschirmrand entfernt
@@ -18,7 +18,7 @@
         Try                                                             'Überprüfung der Gültigkeit der Eingabe für Winkel Auslenkung
             frmStart.WinkelAuslenk = txtWinkelMax.Text                      'Prüfung der Variablen-Definition
         Catch ex As Exception                                               'nicht gültig
-            a = False                                                       'dann Boolsche Variable auf FALSE
+            a = False                                                       'dann Boolesche Variable auf FALSE
             txtWinkelMax.BackColor = Color.Red                              'und Hintergrundfarbe auf rot
         End Try
 

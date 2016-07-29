@@ -1,12 +1,4 @@
 ﻿Public Class frmStart
-
-
-    Public g As Decimal
-    Public r As Decimal
-    Public l As Decimal
-
-
-
     Private Sub frmStart_Load(sender As Object, e As EventArgs) Handles Me.Load
         DoubleBuffered = True
         Me.Left = 500
@@ -16,6 +8,25 @@
         Me.zeit = 0
         Me.gfxTimer.Start()                                                                     'Explanation to gfxTimer
     End Sub
+
+    Public g As Decimal
+    Public r As Decimal
+    Public l As Decimal
+
+    Public WinkelAccel As Decimal
+    Public WinkelSpeed As Decimal
+    Public WinkelAuslenk As Decimal
+
+    Public reibung As Decimal
+    Public zeit As Integer
+
+    Public alphawa(100) As Decimal            '-> 101 Positionen!     
+    Public alphas(100) As Decimal
+    Public alphaa(100) As Decimal
+
+
+
+
 
     Private Sub cmdPendel2D_Click(sender As Object, e As EventArgs) Handles cmdPendel2D.Click
         If frmPendel.Visible Then        'Wenn frmPendel (2D) angezeigt, dann "versteckt" der Klick das Fenster wieder
@@ -74,16 +85,7 @@
 
 
 
-    Public WinkelAccel As Decimal
-    Public WinkelSpeed As Decimal
-    Public WinkelAuslenk As Decimal
-
-    Public reibung As Decimal
-    Public zeit As Integer
-
-    Public alphawa(100) As Decimal            '-> 101 Positionen!     
-    Public alphas(100) As Decimal
-    Public alphaa(100) As Decimal
+   
 
     Private Sub physTimer_Tick(sender As Object, e As EventArgs) Handles physTimer.Tick
 

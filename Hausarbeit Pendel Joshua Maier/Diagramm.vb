@@ -6,7 +6,6 @@
         Me.Top = 10                                                                 '10 Einheiten vom oberen Bildschirmrand entfernt
         Me.Width = 650                                                              'Breite = 650 Einheiten
         Me.Height = 600                                                             'Hoehe = 600 Einheiten
-        Me.HoeheDiagramm = Height - 200
         auto_scale(False)
     End Sub
 
@@ -21,7 +20,7 @@
 
     Dim x0 As Decimal
     Dim x1 As Decimal
-    Dim dx As Decimal                               'What's dx?
+    Dim dx As Decimal                               'Horizontale Entfernung von einem Punkt zum nächsten
     Dim yAuslenkung0 As Decimal
     Dim yAuslenkung1 As Decimal
     Dim ySpeed0 As Decimal
@@ -41,16 +40,16 @@
         HoeheDiagramm = Me.Height - 200
         BreiteDiagramm = Me.Width - 20
         xUrsprungx = 10
-        xUrsprungy = 150
+        xUrsprungy = 350
 
         auto_scale(True)
 
         dx = BreiteDiagramm / 100
 
         With e.Graphics
-            .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy, BreiteDiagramm, HoeheDiagramm)
-            .FillRectangle(Brushes.White, xUrsprungx, xUrsprungy, BreiteDiagramm, HoeheDiagramm)
-            .DrawLine(xAchse, xUrsprungx, xUrsprungy + HoeheDiagramm / 2, xUrsprungx + BreiteDiagramm, xUrsprungy + HoeheDiagramm / 2)
+            .DrawRectangle(Umrandung, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
+            .FillRectangle(Brushes.White, xUrsprungx, xUrsprungy - HoeheDiagramm / 2, BreiteDiagramm, HoeheDiagramm)
+            .DrawLine(xAchse, xUrsprungx, xUrsprungy, xUrsprungx + BreiteDiagramm, xUrsprungy)
         End With
 
         For i = 1 To Math.Min(frmStart.zeit - 2, 100)
@@ -118,7 +117,7 @@
         zoom = 1.0
     End Sub
 
-    Public Sub auto_scale(onlyIfBoundsExceeded As Boolean)
+    Public Sub auto_scale(Nurwennaußerhalb As Boolean)
         'Autoscale sets the scale factor to be equal to (half of graph height) / (magnitude of the data point with the highest magnitude).
         'Therefore, that data point will have a height equal to half the graph height, which means it and all smaller data points
         '(that is, all data points) will fit neatly inside the graph.
@@ -126,16 +125,12 @@
         Dim scaleVal As Decimal
         Dim tmpZoom As Decimal
 
-        scaleVal = {
-            frmStart.alphaa.Max(), -frmStart.alphaa.Min(),
-            frmStart.alphas.Max(), -frmStart.alphas.Min(),
-            frmStart.alphawa.Max(), -frmStart.alphawa.Min()
-        }.Max()
+        scaleVal = {frmStart.alphaa.Max(), frmStart.alphas.Max(), frmStart.alphawa.Max()}.Max()
 
         If scaleVal > 0 Then                                    'to avoid zero-division
             tmpZoom = HoeheDiagramm / (2 * scaleVal)
 
-            If onlyIfBoundsExceeded Then
+            If Nurwennaußerhalb Then
                 'autoscale only when the data exceeds the bounds of the graph
                 zoom = Math.Min(zoom, tmpZoom)
             Else

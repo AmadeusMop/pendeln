@@ -1,5 +1,16 @@
 ﻿Public Class frmPendel3D
 
+    Private Sub frmPendel3D_Load(sender As Object, e As EventArgs) Handles Me.Load
+        DoubleBuffered = True
+        Me.Width = 500                      'Weite und Höhe des Fensters
+        Me.Height = 550
+
+        xAufhaengung3D = Me.Width / 2       'Definition des Aufhängungspunktes
+        yAufhaengung3D = Me.Height / 2
+
+
+    End Sub
+
     Public Breite As Integer                            'Definition Variablen für Breite, Höhe, Tiefe des Quaders
     Public Hoehe As Integer
     Public Tiefe As Integer
@@ -37,20 +48,6 @@
 
 
 
-
-
-    Private Sub frmPendel3D_Load(sender As Object, e As EventArgs) Handles Me.Load
-        DoubleBuffered = True
-        Me.Width = 500                      'Weite und Höhe des Fensters
-        Me.Height = 550
-
-        xAufhaengung3D = Me.Width / 2       'Definition des Aufhängungspunktes
-        yAufhaengung3D = Me.Height / 2
-
-
-    End Sub
-
-
     Private Sub frmPendel3D_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
 
         WinkelDrehz = frmStart.WinkelAuslenk               'Wert für Auslenkwinkel aus frmPendel holen
@@ -59,27 +56,27 @@
         'Punkte des Quaders von vorne oben links rundzählend nach hinten unten links sind 0,1,2,3 ; 4,5,6,7
 
 
-        For Each i In {0, 3, 4, 7}          'Punkte links(left)
+        For Each i In {0, 3, 4, 7}          'Punkte links
             xNull(i) = -Breite / 2          'Breite (x) wird von Mitte aufgespannt, Breite links
         Next
 
-        For Each i In {1, 2, 5, 6}          'Punkte rechts(right)
+        For Each i In {1, 2, 5, 6}          'Punkte rechts
             xNull(i) = Breite / 2           'Breite rechts
         Next
 
-        For Each i In {0, 1, 2, 3}          'Punkte oben(top)
+        For Each i In {0, 1, 2, 3}          'Punkte oben
             yNull(i) = 0                    'Oben=Nullpunkt, y Richtung wird nach unten aufgespannt (aber positiv)
         Next
 
-        For Each i In {4, 5, 6, 7}          'Punkte unten(bottom)
+        For Each i In {4, 5, 6, 7}          'Punkte unten
             yNull(i) = Hoehe                'Nach unten aufgespannte y Richtung = Hoehe
         Next
 
-        For Each i In {2, 3, 6, 7}          'Punkte hinten(back)
+        For Each i In {2, 3, 6, 7}          'Punkte hinten
             zNull(i) = -Tiefe / 2           'Tiefe (z) wird auch aus der Mitte heraus aufgespannt, Tiefe nach hinten
         Next
 
-        For Each i In {0, 1, 4, 5}          'Punkte vorne(front)
+        For Each i In {0, 1, 4, 5}          'Punkte vorne
             zNull(i) = Tiefe / 2            'Tiefe nach vorne
         Next
 
