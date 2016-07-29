@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{907333F0-545F-447B-B300-B44033060F72}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Hausarbeit_Pendel_Joshua_Maier.My.MyApplication</StartupObject>
-    <RootNamespace>Hausarbeit_Pendel_Joshua_Maier</RootNamespace>
-    <AssemblyName>Hausarbeit Pendel Joshua Maier</AssemblyName>
+    <StartupObject>VB_Projektarbeit_Pendel_Joshua_Maier.My.MyApplication</StartupObject>
+    <RootNamespace>VB_Projektarbeit_Pendel_Joshua_Maier</RootNamespace>
+    <AssemblyName>VB Projektarbeit Pendel Joshua Maier</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -35,7 +35,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Hausarbeit Pendel Joshua Maier.xml</DocumentationFile>
+    <DocumentationFile>VB Projektarbeit Pendel Joshua Maier.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -45,7 +45,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Hausarbeit Pendel Joshua Maier.xml</DocumentationFile>
+    <DocumentationFile>VB Projektarbeit Pendel Joshua Maier.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
