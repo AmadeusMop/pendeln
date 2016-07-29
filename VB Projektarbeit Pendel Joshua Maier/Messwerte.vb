@@ -1,7 +1,4 @@
 ﻿Public Class Messwerte
-    Private Sub Messwerte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Messwerte_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         Dim accel As Decimal
